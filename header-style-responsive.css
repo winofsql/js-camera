@@ -1,0 +1,28 @@
+#camera {
+  border: 1px solid #000000;
+}
+
+/**********************/
+/* PC */
+/**********************/
+@media screen and ( min-width:<?= $pc_min_width ?>px ) {
+  #camera, #canvas {
+    width: <?= $base_size_w ?>px;
+    height: <?= $base_size_h ?>px;
+  }
+  #qrcode {
+    display: block;
+  }
+}
+
+/**********************/
+/* スマホ */
+/**********************/
+@media screen and ( max-width:<?= $pc_min_width - 1 ?>px ) {
+  #camera, #canvas {
+    width: 100%;
+  }
+  #qrcode {
+    display: none;
+  }
+}
